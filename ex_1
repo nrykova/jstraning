@@ -1,0 +1,16 @@
+function t1(rows){
+    
+    for(i=1;i<=rows;i++){
+        row=""
+        for(j=1;j<=i;j++){
+            row=row+" *"
+        }
+        for(k=1;k<=rows-i;k++){
+            row=" "+row
+        }
+        console.log(row)
+    }
+
+}
+
+t1(4)
