@@ -1,0 +1,16 @@
+function t2(rows,symbols){
+    
+    for(i=1;i<=rows;i++){
+        row=""
+        k=i%2
+        for(j=1;j<=symbols;j++){
+            a=j%2==k?"#":"_"
+         row=row+a
+            
+        }
+        console.log(row)
+    }
+
+}
+
+t2(5,4)
