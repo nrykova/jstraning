@@ -1,0 +1,40 @@
+function isPalindrome(word){
+    str = word.replace(/\s/g, '')
+    for(i=0;i<Math.round(str.length/2);i++){
+       if(str[i]!==str[str.length-i-1]){
+         return false
+       }
+    }
+    return true
+}
+
+console.log (isPalindrome("word"))
+
+
+function reverse(sentense) {
+    m=""
+    for(i=0;i<sentense.length;i++){
+        if(isLetter(sentense[i])){
+            m=sentense[i]+m  
+        }
+    }
+    for(i=0;i<sentense.length;i++){
+        if(!isLetter(sentense[i])){
+          m = [m.slice(0, i), sentense[i], m.slice(i)].join('');
+        }
+    }
+    return m
+}
+function isLetter(str) {
+    return str.match(/[a-z]/i);
+}
+console.log(reverse("Great weekend!"))
+
+
+
+function removeWord(word, sentence) {
+  var regex = new RegExp('\\b' + word + '\\b\\s?', "g");
+  return sentence.replace(regex, "")
+}
+
+console.log (removeWord("example", "Your forexample specific example is backwards example"))
